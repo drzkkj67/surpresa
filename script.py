@@ -82,9 +82,9 @@ st.markdown("""
 st.markdown("<h1>Nossa História de Amor ✨</h1>", unsafe_allow_html=True)
 
 # Contador automático de dias
-data_inicio = datetime(2022, 10, 1)
+data_inicio = datetime(2024, 6, 12)
 dias_juntos = (datetime.now() - data_inicio).days
-st.write(f"💖 Juntos há **{dias_juntos} dias** da nossa historia! 💖")
+st.write(f"💖 Juntos há **{dias_juntos} dias** criando o nosso próprio universo! 💖")
 
 st.write("---")
 
@@ -95,13 +95,23 @@ aba1, aba2, aba3 = st.tabs(["💌 Uma Mensagem", "✨ Coisas Nossas", "🖼️ �
 with aba1:
     st.markdown("### Para a pessoa mais especial do mundo... 📜")
 
+    # SUA CARTA OFICIAL PERSONALIZADA COLOCADA AQUI:
     st.markdown("""
     <div class="carta-romantica">
         <p style='text-align: justify; font-style: italic; color: #c2185b; margin: 0; font-weight: 500;'>
-        "Escreva aqui a sua carta ou mensagem especial para ela. 
-        Você pode falar sobre como sua vida mudou para melhor, lembrar do seu momento 
-        favorito ao lado dela, fazer promessas fofas para o futuro e deixar claro o quanto 
-        ela é importante. Deixei esse espaço bem lindo para a sua declaração brilhar!"
+        "Gatinha, muito obrigado por mudar minha vida desde o dia que você voltou para mim. 
+        No começo foi um pouquinho difícil, porém mesmo assim eu não desisti de você porque você 
+        sabe que sempre fui louco por você. Então quero agradecer por simplesmente me transformar 
+        em um homem de verdade e, obviamente, em um homem de Deus.<br><br>
+        Sei que tem muitos traumas, porém quero ser o homem que vai te ajudar a curar você de todos 
+        os seus traumas com minha forma de amar, te trazendo conforto. Te adoro muito e quero te 
+        agradecer por tudo que já fez por mim.<br><br>
+        Fiz essa mini surpresa, não é nada demais, porém foi feita com bastante amor. Que nós dois 
+        sejamos muito felizes e que conquistemos muitas coisas juntas, e obviamente que Deus esteja 
+        no nosso centro, porque sem Ele não somos nada.<br><br>
+        Mas é isso, princesa, nada que você já não tenha ouvido antes, mas só quero te dizer que 
+        sempre vou estar aqui para tudo que precisar. Você é incrível e muito especial para mim.<br><br>
+        Te adoro muito, minha garota! ❤️"
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -129,12 +139,11 @@ with aba1:
     st.write("---")
 
     # ---------------------------------------------
-    # JOGUINHO DO BOTÃO FUJÃO (IMPOSSÍVEL CLICAR NO NÃO)
+    # JOGUINHO DO BOTÃO FUJÃO
     # ---------------------------------------------
     st.markdown("#### 💘 Responda com sinceridade:")
     st.write("Você gosta de mim?")
 
-    # Código injetado que faz a mágica do botão fugir
     st.components.v1.html("""
     <div style="display: flex; justify-content: center; align-items: center; gap: 40px; height: 100px; font-family: 'Helvetica', sans-serif;">
         <button id="btnSim" style="padding: 12px 30px; font-size: 18px; font-weight: bold; background-color: #28a745; color: white; border: none; border-radius: 8px; cursor: pointer;">SIM! 😍</button>
@@ -150,25 +159,20 @@ with aba1:
         const btnSim = document.getElementById('btnSim');
         const mensagem = document.getElementById('mensagemSucesso');
 
-        // Função para mover o botão Não de forma aleatória
         function desviar() {
-            const larguraJanela = 200; // Limita o espaço para não sumir da tela
+            const larguraJanela = 200;
             const alturaJanela = 50;
-
             const xAleatorio = Math.floor(Math.random() * larguraJanela) - (larguraJanela / 2);
             const yAleatorio = Math.floor(Math.random() * alturaJanela) - (alturaJanela / 2);
-
             btnNao.style.transform = `translate(${xAleatorio}px, ${yAleatorio}px)`;
         }
 
-        // Eventos para desktop (passar mouse) e celular (tocar)
         btnNao.addEventListener('mouseover', desviar);
         btnNao.addEventListener('touchstart', (e) => {
             e.preventDefault();
             desviar();
         });
 
-        // Evento quando clica no SIM
         btnSim.addEventListener('click', () => {
             mensagem.style.display = 'block';
             btnNao.style.display = 'none';
@@ -181,10 +185,10 @@ with aba1:
 
     if st.button("Clique aqui para abrir um segredo de nós dois 🤫", use_container_width=True):
         st.balloons()
-        st.success("Adoro escutar seus fuuuuuuuuuuuuunnnnnnnnnnnnnnn! ❤️")
+        st.success("Você é, sem dúvidas, o meu melhor momento todos os dias! ❤️")
         st.snow()
 
-# --- ABA 2: COISAS NOSSAS (CUPONS, QUIZ, DESEJOS E ELOGIOS) ---
+# --- ABA 2: COISAS NOSSAS ---
 with aba3:
     pass
 
@@ -201,17 +205,11 @@ with aba2:
         c3 = st.button("Cupom Cinema 🎬", use_container_width=True)
 
     if c1:
-        st.markdown(
-            '<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 MASSAGEM CAPRICHADA</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Válido para quando você estiver cansada. Reclamação zero garantida!</p></div>',
-            unsafe_allow_html=True)
+        st.markdown('<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 MASSAGEM CAPRICHADA</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Válido para quando você estiver cansada. Reclamação zero garantida!</p></div>', unsafe_allow_html=True)
     elif c2:
-        st.markdown(
-            '<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 JANTAR POR MINHA CONTA</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Eu cozinho ou eu pago o delivery da sua comida favorita. Você escolhe!</p></div>',
-            unsafe_allow_html=True)
+        st.markdown('<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 JANTAR POR MINHA CONTA</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Eu cozinho ou eu pago o delivery da sua comida favorita. Você escolhe!</p></div>', unsafe_allow_html=True)
     elif c3:
-        st.markdown(
-            '<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 CINEMA (VOCÊ ESCOLHE)</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Direito a escolher o filme e o combo de pipoca sem eu dar nenhum piu.</p></div>',
-            unsafe_allow_html=True)
+        st.markdown('<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 CINEMA (VOCÊ ESCOLHE)</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Direito a escolher o filme e o combo de pipoca sem eu dar nenhum piu.</p></div>', unsafe_allow_html=True)
 
     st.write("---")
 
@@ -227,84 +225,10 @@ with aba2:
 
     if pergunta == "Ficar de bobeira comendo e assistindo algo":
         st.balloons()
-        st.success(
-            "Acertou em cheio! Estar bem grudadinho com você e comendo algo gostoso é a melhor coisa do mundo! 🍿❤️")
+        st.success("Acertou em cheio! Estar bem grudadinho com você e comendo algo gostoso é a melhor coisa do mundo! 🍿❤️")
     elif pergunta is not None:
         st.error("Errou feio, errou feio! ❌ Como punição vai ter que me dar 10 beijos agora mesmo!")
 
     st.write("---")
 
-    st.markdown("### 🚀 Nossos Próximos Sonhos")
-    st.write("Coisas que ainda vamos realizar e marcar o 'check' juntos:")
-
-    st.checkbox("Viajar para um lugar bem longe e tirar fotos perfeitas ✈️", value=False)
-    st.checkbox("Ir no show de um artista que nós dois amamos muito 🎤", value=False)
-    st.checkbox("Fazer uma noite inteira só jogando ou assistindo nossas séries 🎮", value=False)
-    st.checkbox("Completar mais e mais anos de história juntos ♾️", value=True)
-
-    st.write("---")
-
-    # ---------------------------------------------
-    # SEÇÃO 5: GERADOR DE MENSAGENS E ELOGIOS SURPRESA
-    # ---------------------------------------------
-    st.markdown("### 💌 Um Mimo para o seu Dia")
-    st.write("Se o dia estiver difícil ou se você só quiser um carinho extra, clique abaixo:")
-
-    # Lista de frases fofas para sortear (Fique à vontade para mudar ou adicionar mais!)
-    elogios = [
-        "Você tem o sorriso mais lindo desse mundo inteirinho! 😍",
-        "O seu abraço é, e sempre será, o meu lugar favorito no universo. 💖",
-        "Amo o jeito que você me faz sorrir sem o menor esforço! 🥰",
-        "Minha vida ficou mil vezes mais colorida e feliz depois que você chegou. 🌈",
-        "Sortudo mesmo sou eu de ter a pessoa mais incrível do mundo ao meu lado! ❤️",
-        "Você é linda em cada mínimo detalhe. Nunca se esqueça disso! ✨"
-    ]
-
-    if st.button("Preciso de um mimo hoje 🥺", use_container_width=True):
-        mimo_sorteado = random.choice(elogios)
-        st.success(mimo_sorteado)
-
-# --- ABA 3: ÁLBUM DE FOTOS ---
-with aba3:
-    st.markdown("### Nosso Cantinho de Memórias 📸")
-    st.write(" ")
-
-    colunas = st.columns(3)
-    fotos = [f'foto{i}.jpeg' for i in range(1, 24)]
-
-    indice_coluna = 0
-    for nome_arquivo in fotos:
-        if os.path.exists(nome_arquivo):
-            with colunas[indice_coluna]:
-                imagem = Image.open(nome_arquivo)
-                st.image(imagem, use_container_width=True)
-
-            indice_coluna += 1
-            if indice_coluna > 2:
-                indice_coluna = 0
-
-# --- BARRA LATERAL COM O SEU ÁUDIO LOCAL ---
-with st.sidebar:
-    st.markdown("<h2 style='text-align: left; color: #e91e63;'>🎵 Trilha Sonora</h2>", unsafe_allow_html=True)
-    st.write("Dê o play para navegar pelo site no clima perfeito!")
-    st.write("---")
-
-    nome_capa = "capa.jpeg"
-    if os.path.exists(nome_capa):
-        imagem_capa = Image.open(nome_capa)
-        st.image(imagem_capa, use_container_width=True)
-    elif os.path.exists("foto20.jpeg"):
-        imagem_capa_reserva = Image.open("foto20.jpeg")
-        st.image(imagem_capa_reserva, use_container_width=True)
-
-    st.markdown(
-        "<p style='font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: #c2185b;'>Léo Foguete - Cópia Proibida 🚀</p>",
-        unsafe_allow_html=True)
-
-    nome_musica = "Cópia Proibida - Léo Foguete - Léo Foguete 🚀 (youtube).mp3"
-    if os.path.exists(nome_musica):
-        with open(nome_musica, "rb") as arquivo_audio:
-            bytes_audio = arquivo_audio.read()
-            st.audio(bytes_audio, format="audio/mp3")
-    else:
-        st.warning("⚠️ Arquivo de áudio não encontrado!")
+    st.markdown("###
