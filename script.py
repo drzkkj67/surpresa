@@ -292,7 +292,7 @@ with st.sidebar:
 
     st.markdown("<p style='font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: #c2185b;'>Léo Foguete - Cópia Proibida 🚀</p>", unsafe_allow_html=True)
 
-    nome_musica = "musica.mp3"
+    nome_musica = "Cópia Proibida - Léo Foguete - Léo Foguete 🚀 (youtube).mp3"
     if os.path.exists(nome_musica):
         with open(nome_musica, "rb") as arquivo_audio:
             bytes_audio = arquivo_audio.read()
