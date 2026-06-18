@@ -17,7 +17,7 @@ st.markdown("""
 
     /* Fontes e Títulos Principais */
     h1 { color: #e91e63; text-align: center; font-family: 'Helvetica', sans-serif; font-weight: bold; margin-bottom: 5px; }
-    h2 { color: #e91e63; font-family: 'Helvetica', sans-serif; text-align: center; }
+    h2 { color: #e91e63; text-align: center; font-family: 'Helvetica', sans-serif; }
 
     /* Títulos das seções internas em PRETO */
     h3, h4 { color: #000000 !important; font-family: 'Helvetica', sans-serif; text-align: center; font-weight: bold; }
@@ -102,7 +102,7 @@ with aba1:
         "Gatinha, muito obrigado por mudar minha vida desde o dia que você voltou para mim. 
         No começo foi um pouquinho difícil, porém mesmo assim eu não desisti de você porque você 
         sabe que sempre fui louco por você. Então quero agradecer por simplesmente me transformar 
-        em um homem de verdade e, obviamente, em um homem de Deus.<br><br>
+        em um homem de verdade e, obviously, em um homem de Deus.<br><br>
         Sei que tem muitos traumas, porém quero ser o homem que vai te ajudar a curar você de todos 
         os seus traumas com minha forma de amar, te trazendo conforto. Te adoro muito e quero te 
         agradecer por tudo que já fez por mim.<br><br>
@@ -111,7 +111,7 @@ with aba1:
         no nosso centro, porque sem Ele não somos nada.<br><br>
         Mas é isso, princesa, nada que você já não tenha ouvido antes, mas só quero te dizer que 
         sempre vou estar aqui para tudo que precisar. Você é incrível e muito especial para mim.<br><br>
-        Te adoro muito, minha garota! ❤️"
+        Te adoro muito, minha garota! S2"
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -231,4 +231,71 @@ with aba2:
 
     st.write("---")
 
-    st.markdown("###
+    st.markdown("### 🚀 Nossos Próximos Sonhos")
+    st.write("Coisas que ainda vamos realizar e marcar o 'check' juntos:")
+
+    st.checkbox("Viajar para um lugar bem longe e tirar fotos perfeitas ✈️", value=False)
+    st.checkbox("Ir no show de um artist que nós dois amamos muito 🎤", value=False)
+    st.checkbox("Fazer uma noite inteira só jogando ou assistindo nossas séries 🎮", value=False)
+    st.checkbox("Completar mais e mais anos de história juntos ♾️", value=True)
+
+    st.write("---")
+
+    st.markdown("### 💌 Um Mimo para o seu Dia")
+    st.write("Se o dia estiver difícil ou se você só quiser um carinho extra, clique abaixo:")
+    
+    elogios = [
+        "Você tem o sorriso mais lindo desse mundo inteirinho! 😍",
+        "O seu abraço é, e sempre será, o meu lugar favorito no universo. 💖",
+        "Amo o jeito que você me faz sorrir sem o menor esforço! 🥰",
+        "Minha vida ficou mil vezes mais colorida e feliz depois que você chegou. 🌈",
+        "Sortudo mesmo sou eu de ter a pessoa mais incrível do mundo ao meu lado! ❤️",
+        "Você é linda em cada mínimo detalhe. Nunca se esqueça disso! ✨"
+    ]
+    
+    if st.button("Preciso de um mimo hoje 🥺", use_container_width=True):
+        mimo_sorteado = random.choice(elogios)
+        st.success(mimo_sorteado)
+
+# --- ABA 3: ÁLBUM DE FOTOS ---
+with aba3:
+    st.markdown("### Nosso Cantinho de Memórias 📸")
+    st.write(" ")
+
+    colunas = st.columns(3)
+    fotos = [f'foto{i}.jpeg' for i in range(1, 24)]
+
+    indice_coluna = 0
+    for nome_arquivo in fotos:
+        if os.path.exists(nome_arquivo):
+            with colunas[indice_coluna]:
+                imagem = Image.open(nome_arquivo)
+                st.image(imagem, use_container_width=True)
+
+            indice_coluna += 1
+            if indice_coluna > 2:
+                indice_coluna = 0
+
+# --- BARRA LATERAL COM O SEU ÁUDIO LOCAL ---
+with st.sidebar:
+    st.markdown("<h2 style='text-align: left; color: #e91e63;'>🎵 Trilha Sonora</h2>", unsafe_allow_html=True)
+    st.write("Dê o play para navegar pelo site no clima perfeito!")
+    st.write("---")
+
+    nome_capa = "capa.jpeg"
+    if os.path.exists(nome_capa):
+        imagem_capa = Image.open(nome_capa)
+        st.image(imagem_capa, use_container_width=True)
+    elif os.path.exists("foto20.jpeg"):
+        imagem_capa_reserva = Image.open("foto20.jpeg")
+        st.image(imagem_capa_reserva, use_container_width=True)
+
+    st.markdown("<p style='font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: #c2185b;'>Léo Foguete - Cópia Proibida 🚀</p>", unsafe_allow_html=True)
+
+    nome_musica = "musica.mp3"
+    if os.path.exists(nome_musica):
+        with open(nome_musica, "rb") as arquivo_audio:
+            bytes_audio = arquivo_audio.read()
+            st.audio(bytes_audio, format="audio/mp3")
+    else:
+        st.warning("⚠️ Arquivo de áudio não encontrado!")
