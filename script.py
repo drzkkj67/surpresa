@@ -102,7 +102,7 @@ with aba1:
         "Gatinha, muito obrigado por mudar minha vida desde o dia que você voltou para mim. 
         No começo foi um pouquinho difícil, porém mesmo assim eu não desisti de você porque você 
         sabe que sempre fui louco por você. Então quero agradecer por simplesmente me transformar 
-        em um homem de verdade e, obviously, em um homem de Deus.<br><br>
+        em um homem de verdade e, obviamente, em um homem de Deus.<br><br>
         Sei que tem muitos traumas, porém quero ser o homem que vai te ajudar a curar você de todos 
         os seus traumas com minha forma de amar, te trazendo conforto. Te adoro muito e quero te 
         agradecer por tudo que já fez por mim.<br><br>
@@ -157,7 +157,7 @@ with aba1:
     <script>
         const btnNao = document.getElementById('btnNao');
         const btnSim = document.getElementById('btnSim');
-        const mensagem = document.getElementById('mensagemSucesso');
+        const message = document.getElementById('mensagemSucesso');
 
         function desviar() {
             const larguraJanela = 200;
@@ -174,7 +174,7 @@ with aba1:
         });
 
         btnSim.addEventListener('click', () => {
-            mensagem.style.display = 'block';
+            message.style.display = 'block';
             btnNao.style.display = 'none';
             btnSim.style.display = 'none';
         });
@@ -185,7 +185,7 @@ with aba1:
 
     if st.button("Clique aqui para abrir um segredo de nós dois 🤫", use_container_width=True):
         st.balloons()
-        st.success("Você é, sem dúvidas, o meu melhor momento todos os dias! ❤️")
+        st.success("Adoro seus FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUNNNNNNNNNNNNNNNNNNNN! ❤️")
         st.snow()
 
 # --- ABA 2: COISAS NOSSAS ---
@@ -201,8 +201,7 @@ with aba2:
         c1 = st.button("Cupom Massagem 💆‍♀️", use_container_width=True)
     with col_c2:
         c2 = st.button("Cupom Jantar 🍕", use_container_width=True)
-    with col_c3:
-        c3 = st.button("Cupom Cinema 🎬", use_container_width=True)
+    with col_c3 = st.button("Cupom Cinema 🎬", use_container_width=True)
 
     if c1:
         st.markdown('<div class="cupom-gerado"><h4 style="color:white !important; margin:0;">VALE 1 MASSAGEM CAPRICHADA</h4><p style="color:white; font-size:14px; margin:5px 0 0 0;">Válido para quando você estiver cansada. Reclamação zero garantida!</p></div>', unsafe_allow_html=True)
@@ -235,7 +234,7 @@ with aba2:
     st.write("Coisas que ainda vamos realizar e marcar o 'check' juntos:")
 
     st.checkbox("Viajar para um lugar bem longe e tirar fotos perfeitas ✈️", value=False)
-    st.checkbox("Ir no show de um artist que nós dois amamos muito 🎤", value=False)
+    st.checkbox("Ir no show de um artista que nós dois amamos muito 🎤", value=False)
     st.checkbox("Fazer uma noite inteira só jogando ou assistindo nossas séries 🎮", value=False)
     st.checkbox("Completar mais e mais anos de história juntos ♾️", value=True)
 
@@ -276,7 +275,7 @@ with aba3:
             if indice_coluna > 2:
                 indice_coluna = 0
 
-# --- BARRA LATERAL COM O SEU ÁUDIO LOCAL ---
+# --- BARRA LATERAL COM O ÁUDIO ---
 with st.sidebar:
     st.markdown("<h2 style='text-align: left; color: #e91e63;'>🎵 Trilha Sonora</h2>", unsafe_allow_html=True)
     st.write("Dê o play para navegar pelo site no clima perfeito!")
@@ -292,7 +291,7 @@ with st.sidebar:
 
     st.markdown("<p style='font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: #c2185b;'>Léo Foguete - Cópia Proibida 🚀</p>", unsafe_allow_html=True)
 
-    nome_musica = "musica.mp3"
+    nome_musica = "Cópia Proibida - Léo Foguete - Léo Foguete 🚀 (youtube).mp3"
     if os.path.exists(nome_musica):
         with open(nome_musica, "rb") as arquivo_audio:
             bytes_audio = arquivo_audio.read()
