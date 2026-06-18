@@ -5,7 +5,7 @@ from datetime import datetime
 import random
 
 # Configuração da página (Título e Layout)
-st.set_page_config(page_title="Nosso Espaço Amoroso ❤️", page_icon="💝", layout="centered")
+st.set_page_config(page_title="Nosso Espaço❤️", page_icon="💝", layout="centered")
 
 # --- ESTILO SUPER ENFEITADO E PERSONALIZADO (TUDO BRANCO + DETALHES EM ROSA/PRETO) ---
 st.markdown("""
@@ -79,7 +79,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- CABEÇALHO DO SITE ---
-st.markdown("<h1>Nossa História de Amor ✨</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Nossa História ✨</h1>", unsafe_allow_html=True)
 
 # Contador automático de dias
 data_inicio = datetime(2024, 6, 12)
